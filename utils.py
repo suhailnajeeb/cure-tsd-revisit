@@ -39,3 +39,17 @@ def crop_frames(src_path, tgt_path, crop = (128, 128), n = 10):
         tgt_crop.append(tgt[xrand-dx:xrand+dx, yrand-dx:yrand+dx])
     
     return src_crop, tgt_crop
+
+def get_names(out_folder, challenge, real=1, seqs=np.arange(1, 50), chlngSrc=1, level=1, frames=300):
+    srcnames = []
+    tgtnames = []
+
+    for seq in seqs:
+        srcname = "%02d_%02d_%02d_%02d_%02d" % (
+            real, seq, chlngSrc, challenge, level)
+        tgtname = "%02d_%02d_00_00_00" % (real, seq)
+        for i in range(1, frames + 1):
+            frame = "%03d.jpg" % i
+            srcnames.append(os.path.join(out_folder, srcname, frame))
+            tgtnames.append(os.path.join(out_folder, tgtname, frame))
+    return srcnames, tgtnames
