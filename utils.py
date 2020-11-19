@@ -17,3 +17,25 @@ def extract_frames(vid_path, out_folder):
         success, image = vidcap.read()
         #print('Read a new frame: ', success)
         count += 1
+
+def crop_frames(src_path, tgt_path, crop = (128, 128), n = 10):
+    src = cv2.imread(src_path)
+    tgt = cv2.imread(tgt_path)
+
+    dx = int(crop[0]/2)
+    dy = int(crop[1]/2)
+
+    width = tgt.shape[0]
+    height = tgt.shape[1]
+
+    xrands = np.random.randint(dx, width - dx, n)
+    yrands = np.random.randint(dy, height - dy, n)
+
+    src_crop = []
+    tgt_crop = []
+
+    for xrand, yrand in zip(xrands, yrands):
+        src_crop.append(src[xrand-dx:xrand+dx, yrand-dx:yrand+dx])
+        tgt_crop.append(tgt[xrand-dx:xrand+dx, yrand-dx:yrand+dx])
+    
+    return src_crop, tgt_crop
