@@ -55,3 +55,22 @@ def get_names(out_folder, challenge, real=1, seqs=np.arange(1, 50), chlngSrc=1, 
             tgtnames.append(os.path.join(out_folder, tgtname, frame))
     return srcnames, tgtnames
 
+def data_generator(h5file, indexes, batch_size = 1):
+    X = []
+    y = []
+    idx = 0
+    while True:
+        for index in indexes:
+            if(idx == 0):
+                X = []
+                y = []
+            src = h5file["source"][index]
+            tgt = h5file["target"][index]
+
+            X.append(src)
+            y.append(tgt)
+            idx = idx + 1
+
+            if(idx >= batch_size):
+                idx = 0
+                yield np.asarray(X), np.asarray(y)
