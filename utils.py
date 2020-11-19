@@ -40,6 +40,7 @@ def crop_frames(src_path, tgt_path, crop = (128, 128), n = 10):
     
     return src_crop, tgt_crop
 
+# depreciated function
 def get_names(out_folder, challenge, real=1, seqs=np.arange(1, 50), chlngSrc=1, level=1, frames=300):
     srcnames = []
     tgtnames = []
@@ -53,3 +54,4 @@ def get_names(out_folder, challenge, real=1, seqs=np.arange(1, 50), chlngSrc=1, 
             srcnames.append(os.path.join(out_folder, srcname, frame))
             tgtnames.append(os.path.join(out_folder, tgtname, frame))
     return srcnames, tgtnames
+
