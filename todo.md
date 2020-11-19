@@ -6,9 +6,9 @@ Primarily, I intend to work on the preprocessing of the images.
 
 ## Dataset Generation:
 
-* Extract the Zip File
-* Write a function that extracts frames from a single video.
-
+* ~~Extract the Zip File~~
+* ~~Write a function that extracts frames from a single video.~~
+* Let's first create an untouched dataset.
 
 ## List of Challenge Types
 
