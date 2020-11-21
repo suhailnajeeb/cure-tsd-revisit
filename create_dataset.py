@@ -7,7 +7,7 @@ from alive_progress import alive_bar
 real = 1
 seqs = np.arange(1, 50)
 chlngSrc = 1
-challenge = 9
+challenge = 12
 level = 1
 frames = 300
 n_crops = 8

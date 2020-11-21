@@ -11,7 +11,7 @@ out_folder = "C:\\Data\\CURE-TSD\\output"
 real = 1
 seqs = np.arange(1, 50)
 chlngSrc = 1
-challenge = 9
+challenge = 12
 level = 1
 
 vidnames = ["%02d_%02d_%02d_%02d_%02d" %
