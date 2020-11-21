@@ -73,4 +73,4 @@ def data_generator(h5file, indexes, batch_size = 1):
 
             if(idx >= batch_size):
                 idx = 0
-                yield np.asarray(X), np.asarray(y)
+                yield np.asarray(X)/255, np.asarray(y)/255
