@@ -14,8 +14,8 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 set_session(tf.Session(config=config))
 
-img_path = "C:\\Data\\CURE-TSD\\output\\01_01_01_09_01\\028.jpg"
-model_path = "C:\\Data\\CURE-TSD\\models\\rain\\best.hdf5"
+img_path = "C:\\Data\\CURE-TSD\\output\\01_19_01_11_02\\296.jpg"
+model_path = "C:\\Data\\CURE-TSD\\models\\snow\\best.hdf5"
 
 patch = 128
 
@@ -54,7 +54,9 @@ for i in range(nh):
 
 fig, ax = plt.subplots(1, 2)
 
-ax[0].imshow(image)
-ax[1].imshow(prediction)
+ax[0].imshow(image[dh:dh+h, dw: dw+w])
+ax[0].set_title('Snow Image')
+ax[1].imshow(prediction[dh:dh+h, dw: dw+w])
+ax[1].set_title('Enhanced Image')
 
 plt.show()

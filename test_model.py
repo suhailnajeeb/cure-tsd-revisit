@@ -23,8 +23,8 @@ def PSNR(original, compressed):
     psnr = 20 * log10(max_pixel / sqrt(mse)) 
     return psnr 
 
-db_path = "C:\\Data\\CURE-TSD\\h5\\db_11_02.h5"
-model_path = "C:\\Data\\CURE-TSD\\models\\snow\\best.hdf5"
+db_path = "C:\\Data\\CURE-TSD\\h5\\db_12_02.h5"
+model_path = "C:\\Data\\CURE-TSD\\models\\haze\\best.hdf5"
 
 model = load_model(model_path, custom_objects = {'ssim_loss': ssim_loss, 'psnr_tf': psnr_tf})
 
@@ -48,7 +48,7 @@ pred = np.squeeze(y_pred)
 fig, (ax1, ax2, ax3) = plt.subplots(1,3)
 
 ax1.imshow(src)
-ax1.set_title('Snow Image')
+ax1.set_title('Hazy Image')
 ax2.imshow(tgt)
 ax2.set_title('Target Image')
 ax3.imshow(pred)

@@ -15,8 +15,8 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 set_session(tf.Session(config=config))
 
-db_path = "C:\\Data\\CURE-TSD\\h5\\db_12_02.h5"
-model_path = "C:\\Data\\CURE-TSD\\models\\haze"
+db_path = "C:\\Data\\CURE-TSD\\h5\\db_11_02.h5"
+model_path = "C:\\Data\\CURE-TSD\\models\\snow"
 
 ensure_dir(model_path)
 
@@ -39,11 +39,11 @@ val_gen = data_generator(hf, idx_test, batch_size=batch_size)
 #x, y = next(gen)
 
 check1 = ModelCheckpoint(os.path.join(
-    model_path, "dehaze_{epoch:02d}-loss-{val_loss:.3f}.hdf5"), monitor='loss', save_best_only=True, mode='auto')
+    model_path, "desnow{epoch:02d}-loss-{val_loss:.3f}.hdf5"), monitor='loss', save_best_only=True, mode='auto')
 check2 = ModelCheckpoint(os.path.join(
     model_path, "best.hdf5"), monitor='loss', save_best_only=True, mode='auto')
 check3 = CSVLogger(os.path.join(
-    model_path, 'dehaze_trainingLog.csv'), separator=',', append=True)
+    model_path, 'desnow_trainingLog.csv'), separator=',', append=True)
 
 model = makeModel('noiseNet001')
 model.compile(optimizer='adam', loss='mae', metrics=[ssim_loss, psnr_tf])
