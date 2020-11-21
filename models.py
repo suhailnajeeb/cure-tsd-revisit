@@ -23,7 +23,7 @@ def dummyModel(img_shape = (128, 128, 3)):
     return Model(inputs = x, outputs = o)
 
 @addModel
-def maskNet001():
+def noiseNet001():
 	in1 = Input((128,128,3))
 
 	#encoder

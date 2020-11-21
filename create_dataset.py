@@ -8,7 +8,7 @@ real = 1
 seqs = np.arange(1, 50)
 chlngSrc = 1
 challenge = 12
-level = 1
+level = 2
 frames = 300
 n_crops = 8
 n_imgs = int(len(seqs)*frames*n_crops)
@@ -16,7 +16,7 @@ n_imgs = int(len(seqs)*frames*n_crops)
 
 out_folder = "C:\\Data\\CURE-TSD\\output"
 db_folder = "C:\\Data\\CURE-TSD\\h5"
-db_path = "C:\\Data\\CURE-TSD\\h5\\db_%02d.h5"%challenge
+db_path = "C:\\Data\\CURE-TSD\\h5\\db_%02d_%02d.h5"%(challenge, level)
 
 ensure_dir(db_folder)
 
