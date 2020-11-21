@@ -35,8 +35,8 @@ def crop_frames(src_path, tgt_path, crop = (128, 128), n = 10):
     tgt_crop = []
 
     for xrand, yrand in zip(xrands, yrands):
-        src_crop.append(src[xrand-dx:xrand+dx, yrand-dx:yrand+dx])
-        tgt_crop.append(tgt[xrand-dx:xrand+dx, yrand-dx:yrand+dx])
+        src_crop.append(src[xrand-dx:xrand+dx, yrand-dy:yrand+dy])
+        tgt_crop.append(tgt[xrand-dx:xrand+dx, yrand-dy:yrand+dy])
     
     return src_crop, tgt_crop
 
