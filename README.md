@@ -18,6 +18,10 @@ Our goal is to remove different inclement weather conditions affecting road-side
 
 CURE-TSD (Challenging Unreal and Real Environment for Traffic Sign Detection)
 
+<p align="center">
+<img src = "">
+</p>
+
 The dataset contains video from 49 different sequences under different challenging condition. For example - 
 
 1. Decolorization
@@ -59,6 +63,10 @@ The following parts were considered for the preprocessing step:
 
 ## Cropping of Patches
 
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Cropping.png">
+</p>
+
 * Instead of enhancing the whole image at once, we aim at cropping random patches from the image and separately enhance them. 
 * The patch is 128 x 128
 * 8 random patches are taken from each extracted video frame.
@@ -73,6 +81,10 @@ The following parts were considered for the preprocessing step:
 
 # Autoencoder Architecture
 
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/model.png">
+</p>
+
 # Training
 
 * Framework: Tensoflow/Keras
@@ -85,9 +97,49 @@ The following parts were considered for the preprocessing step:
 
 ## Rain
 
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Rain/Figure_1.png">
+</p>
+
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Rain/Figure_2.png">
+</p>
+
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Rain/Figure_3.png">
+</p>
+
+
+
 ## Snow
 
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Snow/Figure_1.png">
+</p>
+
+<p align="center">
+<img src = https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Snow/Figure_2.png"">
+</p>
+
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Snow/Figure_5.png">
+</p>
+
+
 ## Haze
+
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Haze/Figure_2.png">
+</p>
+
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Haze/Figure_4.png">
+</p>
+
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Haze/Figure_5.png">
+</p>
+
 
 # Stitching:
 
@@ -101,9 +153,21 @@ The following parts were considered for the preprocessing step:
 
 ## Rainy Image
 
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Rain/Full_2.png">
+</p>
+
 ## Snow Image
 
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Snow/Full.png">
+</p>
+
 ## Haze Image
+
+<p align="center">
+<img src = "https://raw.githubusercontent.com/suhailnajeeb/cure-tsd-revisit/main/images/Haze/Full.png">
+</p>
 
 # Conclusion and Future Scope
 
